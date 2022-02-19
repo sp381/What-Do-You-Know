@@ -21,8 +21,15 @@ body {
 }
 
 header {
-    background: var(--primary);
+    background: #83929F;
     padding: 30px 25px;
     border-bottom: 5px solid var(--secondary);
+    font-size: larger;
+    font-weight: bold;
 }
 
+header p {
+    color: #BFF6FD;
+    font-style: italic;
+    font-size: large;
+}
