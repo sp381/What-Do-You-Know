@@ -33,3 +33,16 @@ header p {
     font-style: italic;
     font-size: large;
 }
+
+.btn {
+    outline: none;
+    border: none;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #BFF6FD;
+    font-size: 2rem;
+    border-radius: 12px;
+    position: relative;
+    top: -3px;
+    box-shadow: 0 3px #83929F;
+}
