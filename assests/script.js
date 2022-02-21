@@ -1,6 +1,9 @@
 var buttonEl = document.querySelector("#quiz");
-console.log(buttonEl);
+var possibleAnswerEl = document.querySelector("#possible-answer");
 
 buttonEl.addEventListener("click", function() {
-    alert("button clicked");
+    var listItemEl = document.createElement("li");
+    listItemEl.className = "answer-list";
+    listItemEl.textContent = "multiple choice answer";
+    possibleAnswerEl.appendChild(listItemEl)
 });
