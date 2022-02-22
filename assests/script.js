@@ -6,4 +6,14 @@ buttonEl.addEventListener("click", function() {
     listItemEl.className = "answer-list";
     listItemEl.textContent = "multiple choice answer";
     possibleAnswerEl.appendChild(listItemEl)
+
+    
+    var answerInput = document.querySelector("#answer-input");
+    var answerInputclick = document.querySelector("#answer-input");
+
+    answerInputClick.addEventListener("click", insertAnswer);
+
 });
+
+
+ 
