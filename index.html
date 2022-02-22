@@ -8,34 +8,28 @@
     <link rel="stylesheet" href="./assests/stylesheet.css">
 </head>
 
-<body>
+<body class="correct"> 
     <header>
         <h1 class="page-title">Test You Javascript Knowledge</h1>
         <p>Complete this timed quiz and test how much you know about Javascript</p>
-        <button class="btn" id="quiz">Start</button>
+        <button class="start-btn-control btn hide" id="start-btn">Start</button>
     </header>
 
-    <main class="page-content">
-        <section class="quiz-list-wrapper">
-            <h2 class="question">
-                1. Which of the following functions is a valid type of function that javascript supports?
-            </h2>
-                <ul class="answer-list" id="possible-answer">
-                    <li class="list">A. named function</li>
-                    <li class="list">B. Anonymous function</li> 
-                    <li class="list">C. Both A and B are true<li>
-                    <li class="list">D. None of the above</li>
-                    <br>
-                    <form class="insert-asnwer">
-
-                    </form>    
-                    <button class="submit-btn" id="answer-input">Submit Answer</button>
-                </ul>
-            
-                
-
-        </section>
-    </main>
+    <section class="page-content">
+        <section class="container">
+            <div id="question-container" class="hide">
+                <h2 id="question">1. Which of the following functions is a valid type of function that javascript supports?</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">A. Named function</button>
+                    <button class="btn">B. Anonymous function</button>
+                    <button class="btn">C. Both A and B are true</button>
+                    <button class="btn">D. None of the above</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
+    </section>
 
     <script src="./assests/script.js"></script>
 

@@ -1,11 +1,15 @@
-* {
+* , *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+   
+
 
 :root {
     --primary: #BFF6FD; 
     --secondary: #5A6B87;
     --tertiary: #313131;
+    --hue-correct: pink;
     font-size: 62.5%;
 }
 
@@ -15,34 +19,85 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
     flex-direction: column;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 header {
     background: #83929F;
-    padding: 30px 25px;
-    border-bottom: 5px solid var(--secondary);
+    margin-top: 0;
+    padding: 25px 0 auto 0;
     font-size: larger;
     font-weight: bold;
 }
 
+header h1 {
+    margin-top: -250px;
+}
 header p {
     color: #BFF6FD;
     font-style: italic;
     font-size: large;
 }
 
+
 .btn {
     outline: none;
-    border: none;
+    border: 1px #313131 100%, 30%;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 5px 10px;
+    outline: none;
     background: #BFF6FD;
     font-size: 2rem;
     border-radius: 12px;
     position: relative;
     top: -3px;
     box-shadow: 0 3px #83929F;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn correct {
+    --hue: var(--hue-correct);
+}
+
+.next-btn {
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.hide {
+    display: none;
+} */
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: #83929F;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
 }
