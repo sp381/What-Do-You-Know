@@ -3,7 +3,7 @@ const questionContainerElement = document.getElementById ('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-const shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 
@@ -21,7 +21,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-
+    questionElement.innerText = question.question
 }
 
 function selectAnswer() {
@@ -30,7 +30,7 @@ function selectAnswer() {
 
 const questions = [
     {
-        questions: '1. Which of the following functions is a valid type of function that javascript supports?',
+        question: '1. Which of the following functions is a valid type of function that javascript supports?',
         answers: [
             {text:'A. Named function', correct: false},
             {text: 'B. Anonymous function', correct: false},
