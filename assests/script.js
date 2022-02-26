@@ -14,12 +14,14 @@ function startGame() {
     currentQuestionIndex = 0
     setNextQuestion()
     var counter = 60
-var countdown = function() {
+    var countdown = function() {
     console.log(counter);
     counter--;
     if(counter === 0){
+        clearInterval(startCountdown)
     } 
 };
+    var startCountdown = setInterval(countdown, 1000);
 }
 
 //Study set Interval and clear Interval 
