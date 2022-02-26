@@ -10,13 +10,14 @@
 
 <body class="correct"> 
     <header>
-        <h1 class="page-title">Test You Javascript Knowledge</h1>
+        <h1 class="hero">Test You Javascript Knowledge</h1>
         <p>Complete this timed quiz and test how much you know about Javascript</p>
+        <button class="start-btn btn" id="start-btn" id="countdown">Start</button>
     </header>
 
     <section class="page-content">
         <section class="container">
-            <div id="question-container" class="hide">
+            <div id="question-container" id="end-quiz">
                 <h2 id="question">1. Which of the following functions is a valid type of function that javascript supports?</h2>
                 <div id="answer-buttons" class="btn-grid">
                     <button class="btn">A. Named function</button>
@@ -26,14 +27,12 @@
                 </div>
             </div>
             <div class="controls">
-                <button class="start-btn btn" id="start-btn">Start</button>
-                <button id="next-btn" class="next-btn btn hide">Next</button>
             </div>
     </section>
 
     <script src="./assests/script.js"></script>
 
-    <footer>
+    <footer class="footer">
         &copy;2022 by sp381 🤓
     </footer>
 </body>
