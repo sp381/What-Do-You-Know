@@ -17,7 +17,7 @@ body {
     background-image: url(/images/istockphoto-1169712161-612x612.jpg);
     background-repeat: no-repeat;
     background: #313131;
-    color: var(--tertiary);
+    /* color: var(--tertiary); */
     margin: 0;
     padding: 0;
     display: flex;
@@ -27,6 +27,14 @@ body {
     height: 100vh;
     flex-direction: column;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 .hero {

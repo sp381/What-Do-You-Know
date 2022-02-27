@@ -1,30 +1,33 @@
 const startButton = document.getElementById('start-btn')
-//const nextButton = document.getElementById ('next-btn')
 const questionContainerElement = document.getElementById ('question-container')
+const pageContent = document.getElementById('page-content')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const timerEl = document.getElementById('countdown');
-let shuffledQuestions, currentQuestionIndex
-
+let currentQuestionIndex
+var startCountdown
+const timer = document.getElementById('timer')
+var counter  
 startButton.addEventListener('click', startGame)
 
 function startGame() {
     //call on timer function here
+    pageContent.setAttribute("class", "show")
     console.log('Started')
     currentQuestionIndex = 0
     setNextQuestion()
-    var counter = 60
+    counter = 60
     var countdown = function() {
-    console.log(counter);
+    //console.log(counter);
+    timer.textContent = counter
     counter--;
-    if(counter === 0){
-        clearInterval(startCountdown)
+    if(counter <= -1){
+        clearInterval (startCountdown);
     } 
 };
-    var startCountdown = setInterval(countdown, 1000);
+    startCountdown = setInterval(countdown, 1000);
 }
 
-//Study set Interval and clear Interval 
 function setNextQuestion() {
     resetState()
     showQuestion(questions[currentQuestionIndex])
@@ -32,43 +35,62 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    console.log(question.answers)
+    //console.log(question.answers)
     question.answers.forEach (answer => {
+        //console.log(answer)
         const button = document.createElement('button')
+        button.value = answer.correct 
         button.innerText = answer.text
         button.classList.add('btn')
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        } else {
-            console.log('wrong answer');
-        }
-        button.addEventListener('click',selectAnswer)
+        //if (answer.correct) {
+          //  button.dataset.correct = answer.correct
+        // } else {
+        //     console.log('wrong answer');
+        // }
+        button.addEventListener('click',(e)=>{
+            console.log(e.target.value)
+            if(e.target.value === "false") {
+                console.log('incorrect')
+                counter = counter - 10
+            }
+            if(currentQuestionIndex === questions.length) {
+                clearInterval (startCountdown);
+                alert('End of Quiz')
+                pageContent.setAttribute("class", "hide")
+                //call on an end quiz function here
+            } else {
+                //console.log(currentQuestionIndex)
+                setNextQuestion()
+            }
+        })
         answerButtonsElement.appendChild(button)
     })
     currentQuestionIndex= currentQuestionIndex+1
 }
 
 function resetState() {
-   // nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
         (answerButtonsElement.firstChild)
     }
 }
 
-function selectAnswer() {
+function selectAnswer(e) {
+    console.log(e)
     if(currentQuestionIndex === questions.length) {
+        clearInterval (startCountdown);
         alert('End of Quiz')
+        pageContent.setAttribute("class", "hide")
         //call on an end quiz function here
+    } else {
+        //console.log(currentQuestionIndex)
+        setNextQuestion()
     }
-    console.log('hello world')
-    console.log(currentQuestionIndex)
-    setNextQuestion()
+
 }
-//create end quiz function
-    //clear interval for timer
-    //Hide Elements to display end screen
 //Create save score function 
+
+
 const questions = [
     {
         question: '1. Which of the following functions is a valid type of function that javascript supports?',
@@ -112,8 +134,16 @@ const questions = [
     
 ]
 
-var saveScore = function() {
-    localStorage.setItem("score",score);
-}
+    function initials() {
+        var myScore =
+    document.getElementById("question").value;
+        localStorage.setItem("myScore", myScore);
+    }
+    function mySave() {
+        var myScore = localStorage.getItem("myScore");
+        document.getElementById("question").value = myScore;
+        console.log(myScore)
+    }
+
 
  
