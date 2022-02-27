@@ -11,4 +11,4 @@ This quiz has several criterias. They are as follows:
 - Once all of the questions are answered or the timer reaches 0 the game is over.
 - After the game is over you are able to save your intials and score.
 
-Here is the deployed github.io link, test your Javascript knowledge! 😄
+Here is the deployed github.io link, test your Javascript knowledge! 😄 https://sp381.github.io/What-Do-You-Know/
