@@ -79,6 +79,7 @@ function selectAnswer(e) {
     console.log(e)
     if(currentQuestionIndex === questions.length) {
         clearInterval (startCountdown);
+        initials()
         alert('End of Quiz')
         pageContent.setAttribute("class", "hide")
         //call on an end quiz function here
@@ -144,6 +145,6 @@ const questions = [
         document.getElementById("question").value = myScore;
         console.log(myScore)
     }
-
+initials()
 
  
