@@ -13,4 +13,4 @@ This quiz has several criterias. They are as follows:
 
 Here is the deployed github.io link, test your Javascript knowledge! 😄 https://sp381.github.io/What-Do-You-Know/
 
-![GitHub Logo](/images/what-do-know.png) 
+![GitHub Logo](./images/what-do-know.PNG) 
