@@ -80,6 +80,14 @@ function selectAnswer(e) {
     if(currentQuestionIndex === questions.length) {
         clearInterval (startCountdown);
         initials()
+            for (vari=0;i<correct.answer;i++) {
+                if(true[i] == correct)
+                count = count + 1;
+            }
+            document.write(initials + correctAnswers);
+            var myScore = prompt("Please eneter your name and how many you got correct")
+
+
         alert('End of Quiz')
         pageContent.setAttribute("class", "hide")
         //call on an end quiz function here
